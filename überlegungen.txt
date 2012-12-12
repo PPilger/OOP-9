@@ -1,0 +1,16 @@
+Keksdose => Map<Keks, Integer> (keks + anzahl) => gleiche posten werden zusammengefasst
+Keksbackmaschine => mehrere Teige pro maschine möglich???
+Bäckerei
+=> Map<Form, Keksbackmaschine> ??? oder Map<Form, Map<Teig, Keksbackmaschine>> ???
+   Vorteil: einfacher Zugriff auf Keksbackmaschine, konstanter suchaufwand,
+   Nachteil: Wissen über die unterstützten Formen in der Bäckerei
+=> List<Keksbackmaschine> => mit visitor pattern nach der maschine mit passender form und teig suchen (bei erstellen von einer MürbteigKeksBackMaschine zb)
+                          => oder unterstützteTeige.contains(teig) (bei festlegung der teige zur laufzeit)
+   Vorteil: WIssen über die unterstützen Formen in der Backmaschine
+   Nachteil: linearer suchaufwand
+=> Keksbackmaschine vom Posten erzeugen lassen?
+   Nachteil: für jede Bestellung werden KeksBackMaschinen erzeugt und nachher wieder weggeworfen oder wie?^^
+Form, Teig, Füllung => Singelton oder Enum?
+Bestellung.addPosten => überladen mit der Doppelkeks-version.
+DoppelKeksPosten extends Posten ... innere Klassen von Bäckerei (Zugriff auf die maschinen benötigt)
+DoppelKeks extends Keks
