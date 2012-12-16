@@ -2,8 +2,8 @@
 public class DoppelKeks extends Keks {
 	private Fuellung fuellung;
 	
-	public DoppelKeks(Form form, Teig teig, Fuellung fuellung) {
-		super(form, teig);
+	public DoppelKeks(Keks keks, Fuellung fuellung) {
+		super(keks);
 		
 		this.fuellung = fuellung;
 	}

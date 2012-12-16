@@ -1,7 +1,11 @@
+public class MondForm extends Form {
+	@Override
+	public MondKeksBackmaschine getBackmaschine() {
+		return MondKeksBackmaschine.getInstance();
+	}
 
-public class MondForm implements Form{
-	public String toString()
-	{
-		return "Mond";		
+	@Override
+	public String toString() {
+		return "Mond";
 	}
 }

@@ -1,8 +1,11 @@
+public class WeihnachtsmannForm extends Form {
+	@Override
+	public WeihnachtsmannKeksBackmaschine getBackmaschine() {
+		return WeihnachtsmannKeksBackmaschine.getInstance();
+	}
 
-public class WeihnachtsmannForm implements Form{
-
-	public String toString()
-	{
-		return "Weihnachtsmann";		
+	@Override
+	public String toString() {
+		return "Weihnachtsmann";
 	}
 }

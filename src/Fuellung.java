@@ -1,4 +1,3 @@
-
-public interface Fuellung {
-	public String toString();
+public enum Fuellung {
+	Marmelade, Schokolade;
 }

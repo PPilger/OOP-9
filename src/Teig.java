@@ -1,4 +1,4 @@
 
-public interface Teig {
-	public String toString();
+public enum Teig {
+	Muerbteig, Schokoladeteig, Zimtteig;
 }

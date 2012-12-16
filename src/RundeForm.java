@@ -1,7 +1,11 @@
+public class RundeForm extends Form {
+	@Override
+	public RundKeksBackmaschine getBackmaschine() {
+		return RundKeksBackmaschine.getInstance();
+	}
 
-public class RundeForm implements Form{
-	public String toString()
-	{
-		return "Rund";		
+	@Override
+	public String toString() {
+		return "Rund";
 	}
 }

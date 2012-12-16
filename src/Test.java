@@ -3,13 +3,16 @@ public class Test {
 	
 	public static void main(String[] args) {
 		
-		Bestellung b1 = new Bestellung();
+		Bestellung bestellung = new Bestellung();
+		Keksdose dose;
 		
-		b1.addPosten(new KeksPosten(1,new WeihnachtsmannForm(), new MuerbTeig()));
-		b1.addPosten(new KeksPosten(3,new WeihnachtsmannForm(), new MuerbTeig()));
+		bestellung.add(new KeksPosition(1,new WeihnachtsmannForm(), Teig.Muerbteig));
+		bestellung.add(new KeksPosition(3,new WeihnachtsmannForm(), Teig.Muerbteig));
 		
-		System.out.println(b1.drucke());
+		System.out.println(bestellung.drucke());
 		
+		dose = bestellung.backe();
 		
+		System.out.println(dose.inhalt());
 	}
 }

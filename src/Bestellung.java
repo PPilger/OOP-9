@@ -1,38 +1,40 @@
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedList;
 
-public class Bestellung implements Iterable<Posten> {
-
-	private LinkedList<Posten> postenListe;
+public class Bestellung {
+	private LinkedList<Position> postenListe;
 
 	public Bestellung() {
-		this.postenListe = new LinkedList<Posten>();
+		this.postenListe = new LinkedList<Position>();
 	}
 
-	public void addPosten(Posten p) {
+	public void add(Position p) {
 		this.postenListe.add(p);
 	}
 
 	public String drucke() {
-
-		Iterator<Posten> it = this.postenListe.iterator();
+		Iterator<Position> it = this.postenListe.iterator();
 		StringBuilder sb = new StringBuilder();
 		int pos = 1;
-		
+
 		while (it.hasNext()) {
 
-			Posten p = it.next();
+			Position p = it.next();
 
-			sb.append("Posten #" + pos + ": " + p.toString() + "\n");
+			sb.append("Position #" + pos + ": " + p.toString() + "\n");
 			pos++;
 		}
 
 		return sb.toString();
-
 	}
 
-	@Override
-	public Iterator<Posten> iterator() {
-		return postenListe.iterator();
-	}
+	public Keksdose backe() {
+		Keksdose keksdose = new Keksdose();
 
+		for (Position position : postenListe) {
+			keksdose.addKekse(position.backeKekse());
+		}
+
+		return keksdose;
+	}
 }
