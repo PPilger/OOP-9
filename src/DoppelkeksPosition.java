@@ -9,9 +9,9 @@ public class DoppelkeksPosition extends KeksPosition {
 	}
 
 	@Override
-	protected DoppelKeks backeKeks() {
+	protected DoppelKeks backeEines() {
 		DoppelkeksBackmaschine backmaschine = DoppelkeksBackmaschine.getInstance();
-		Keks keks = super.backeKeks();
+		Keks keks = super.backeEines();
 		
 		return backmaschine.backeDoppelkeks(keks, fuellung);
 	}

@@ -8,17 +8,17 @@ public abstract class Position {
 		this.anzahl = anzahl;
 	}
 
-	protected final List<Keks> backeKekse() {
-		List<Keks> kekse = new ArrayList<Keks>();
+	protected final List<Backware> backe() {
+		List<Backware> kekse = new ArrayList<Backware>();
 
 		for (int i = 0; i < anzahl; i++) {
-			kekse.add(backeKeks());
+			kekse.add(backeEines());
 		}
 
 		return kekse;
 	}
 	
-	protected abstract Keks backeKeks();
+	protected abstract Backware backeEines();
 	
 	protected abstract String beschreibung();
 

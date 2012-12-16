@@ -18,7 +18,6 @@ public class Bestellung {
 		int pos = 1;
 
 		while (it.hasNext()) {
-
 			Position p = it.next();
 
 			sb.append("Position #" + pos + ": " + p.toString() + "\n");
@@ -28,11 +27,11 @@ public class Bestellung {
 		return sb.toString();
 	}
 
-	public Keksdose backe() {
-		Keksdose keksdose = new Keksdose();
+	public Dose backe() {
+		Dose keksdose = new Dose();
 
 		for (Position position : postenListe) {
-			keksdose.addKekse(position.backeKekse());
+			keksdose.addAll(position.backe());
 		}
 
 		return keksdose;

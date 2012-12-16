@@ -10,7 +10,7 @@ public class KeksPosition extends Position {
 	}
 
 	@Override
-	protected Keks backeKeks() {
+	protected Keks backeEines() {
 		KeksBackmaschine backmaschine = form.getBackmaschine();
 
 		return backmaschine.backeKeks(teig);

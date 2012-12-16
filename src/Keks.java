@@ -1,4 +1,4 @@
-public class Keks {
+public class Keks implements Backware {
 	private Form form;
 	private Teig teig;
 
