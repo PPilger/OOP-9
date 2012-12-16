@@ -20,7 +20,10 @@ public class Dose {
 		}
 	}
 
-	public String inhalt() {
-		return inhalt.toString();
+	public void inhalt() {
+		for(Backware ware : inhalt.keySet()) {
+			int amount = inhalt.get(ware);
+			System.out.println(amount + " x " + ware);
+		}
 	}
 }

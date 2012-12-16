@@ -12,19 +12,16 @@ public class Bestellung {
 		this.postenListe.add(p);
 	}
 
-	public String drucke() {
+	public void drucke() {
 		Iterator<Position> it = this.postenListe.iterator();
-		StringBuilder sb = new StringBuilder();
-		int pos = 1;
+		int num = 1;
 
 		while (it.hasNext()) {
-			Position p = it.next();
+			Position position = it.next();
 
-			sb.append("Position #" + pos + ": " + p.toString() + "\n");
-			pos++;
+			System.out.println("Position #" + num + ": " + position);
+			num++;
 		}
-
-		return sb.toString();
 	}
 
 	public Dose backe() {

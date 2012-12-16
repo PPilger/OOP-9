@@ -8,11 +8,16 @@ public class Test {
 		
 		bestellung.add(new KeksPosition(1,new WeihnachtsmannForm(), Teig.Muerbteig));
 		bestellung.add(new KeksPosition(3,new WeihnachtsmannForm(), Teig.Muerbteig));
-		
-		System.out.println(bestellung.drucke());
+		bestellung.add(new KeksPosition(2,new RundeForm(), Teig.Schokoladeteig));
+		bestellung.add(new KeksPosition(3,new RundeForm(), Teig.Zimtteig));
+		bestellung.add(new KeksPosition(4,new MondForm(), Teig.Schokoladeteig));
+
+		System.out.println("Bestellung:");
+		bestellung.drucke();
 		
 		dose = bestellung.backe();
 		
-		System.out.println(dose.inhalt());
+		System.out.println("\nInhalt:");
+		dose.inhalt();
 	}
 }
