@@ -1,6 +1,6 @@
 /**
- * Die RundeForm ist eine Erweiterung der Form.
- * Sie erzeugt eine RundKeksBackmaschine.
+ * Die RundeForm ist eine Erweiterung der Form. Sie erzeugt eine
+ * RundKeksBackmaschine.
  */
 public class RundeForm extends Form {
 	@Override

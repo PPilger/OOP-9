@@ -1,3 +1,6 @@
+/**
+ * @TODO: Pilgi
+ */
 public class WeihnachtsmannKeksBackmaschine extends KeksBackmaschine {
 	private static WeihnachtsmannKeksBackmaschine instance;
 

@@ -1,6 +1,6 @@
 /**
- * Die MondForm ist eine Erweiterung der Form.
- * Sie erzeugt eine MondKeksBackmaschine.
+ * Die MondForm ist eine Erweiterung der Form. Sie erzeugt eine
+ * MondKeksBackmaschine.
  */
 public class MondForm extends Form {
 	@Override
