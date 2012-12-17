@@ -1,5 +1,5 @@
 /**
- * Doppelkeks ist Untertyp von Keks. Erweitert wird Keks durch eine FŸllung.
+ * Doppelkeks erweitert Keks durch eine Fuellung.
  */
 public class DoppelKeks extends Keks {
 	private Fuellung fuellung;

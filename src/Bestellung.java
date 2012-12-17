@@ -3,7 +3,7 @@ import java.util.LinkedList;
 
 /**
  * Eine Bestellung kann mehrere Positionen aufnehmen und speichern. Nach einer
- * Ansammlung von Positionen können diese gebacken werden.
+ * Ansammlung von Positionen koennen diese gebacken werden.
  */
 public class Bestellung {
 	private LinkedList<Position> postenListe;
@@ -13,7 +13,7 @@ public class Bestellung {
 	}
 
 	/**
-	 * Fügt eine Position in die Liste hinzu.
+	 * Fuegt eine Position in die Liste hinzu.
 	 * 
 	 * Vorbedingung: p darf nicht null sein.
 	 * 
@@ -45,8 +45,8 @@ public class Bestellung {
 	 * 
 	 * Vorbedingung: Die postenListe darf nicht null sein.
 	 * 
-	 * @return Gibt eine gültige Instanz eines Dose-Objekts, gefüllt mit Keksen
-	 *         zurück.
+	 * @return Gibt eine gueltige Instanz eines Dose-Objekts, gefuellt mit Keksen
+	 *         zurueck.
 	 */
 	public Dose backe() {
 		Dose keksdose = new Dose();

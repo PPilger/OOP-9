@@ -1,3 +1,6 @@
+/**
+ * DoppelkeksPosition erweitert KeksPosition um die Eigenschaft einer Fuellung.
+ */
 public class DoppelkeksPosition extends KeksPosition {
 	private Fuellung fuellung;
 
@@ -10,9 +13,10 @@ public class DoppelkeksPosition extends KeksPosition {
 
 	@Override
 	protected DoppelKeks backeEines() {
-		DoppelkeksBackmaschine backmaschine = DoppelkeksBackmaschine.getInstance();
+		DoppelkeksBackmaschine backmaschine = DoppelkeksBackmaschine
+				.getInstance();
 		Keks keks = super.backeEines();
-		
+
 		return backmaschine.backeDoppelkeks(keks, fuellung);
 	}
 
