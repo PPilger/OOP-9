@@ -1,13 +1,15 @@
-
+/**
+ * Doppelkeks ist Untertyp von Keks. Erweitert wird Keks durch eine FŸllung.
+ */
 public class DoppelKeks extends Keks {
 	private Fuellung fuellung;
-	
+
 	public DoppelKeks(Keks keks, Fuellung fuellung) {
 		super(keks);
-		
+
 		this.fuellung = fuellung;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
