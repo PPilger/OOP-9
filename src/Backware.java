@@ -1,5 +1,5 @@
 /**
- * Ein Keks und ein Doppelkeks sind eine Backware.
+ * Eine Backware, die von der Baeckerei verkauft wird.
  */
 public interface Backware {
 

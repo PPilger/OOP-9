@@ -2,30 +2,26 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
- * Eine Bestellung kann mehrere Positionen aufnehmen und speichern. Nach einer
- * Ansammlung von Positionen koennen diese gebacken werden.
+ * Eine Bestellung kann mehrere Positionen aufnehmen und speichern. Um die
+ * Backwaren zu erhalten, koennen die Backwaren der Positionen gebacken werden.
  */
 public class Bestellung {
-	private LinkedList<Position> postenListe;
-
-	public Bestellung() {
-		this.postenListe = new LinkedList<Position>();
-	}
+	private LinkedList<Position> postenListe = new LinkedList<Position>();
 
 	/**
-	 * Fuegt eine Position in die Liste hinzu.
+	 * Fuegt eine Position zur Bestellung hinzu.
 	 * 
-	 * Vorbedingung: p darf nicht null sein.
-	 * 
-	 * @param p
-	 *            Der Parameter muss eine Position sein.
+	 * Wenn p null ist, werden keine Aenderungen durchgefuehrt.
 	 */
 	public void add(Position p) {
-		this.postenListe.add(p);
+		if (p != null) {
+			this.postenListe.add(p);
+		}
 	}
 
 	/**
-	 * Gibt die Bestellliste mit all ihren Positionen aus.
+	 * Gibt alle Positionen der Bestelliste zeilenweise auf der Standardausgabe
+	 * aus.
 	 */
 	public void drucke() {
 		Iterator<Position> it = this.postenListe.iterator();
@@ -40,13 +36,8 @@ public class Bestellung {
 	}
 
 	/**
-	 * Hier werden alle Positionen der Bestellung ausgebacken und in eine Dose
-	 * gelegt.
-	 * 
-	 * Vorbedingung: Die postenListe darf nicht null sein.
-	 * 
-	 * @return Gibt eine gueltige Instanz eines Dose-Objekts, gefuellt mit Keksen
-	 *         zurueck.
+	 * Baeckt alle bestellten Backwaren und liefert sie in einem neuen
+	 * Dose-Objekt zurueck.
 	 */
 	public Dose backe() {
 		Dose keksdose = new Dose();

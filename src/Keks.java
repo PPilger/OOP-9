@@ -1,5 +1,6 @@
 /**
- * Diese Klasse definiert Form und Teigart eines Kekses.
+ * Diese Klasse repraesentiert einen Keks mit einer bestimmten Form und einem
+ * bestimmten Teig.
  */
 public class Keks implements Backware {
 	private Form form;
@@ -11,14 +12,11 @@ public class Keks implements Backware {
 	}
 
 	/**
-	 * Kopierkonstruktor
-	 * 
-	 * @param other
-	 *            Instanz eines anderen Keks-Objekts
+	 * Kopiert den uebergebenen Keks
 	 */
-	public Keks(Keks other) {
-		this.form = other.form;
-		this.teig = other.teig;
+	public Keks(Keks original) {
+		this.form = original.form;
+		this.teig = original.teig;
 	}
 
 	@Override
@@ -30,6 +28,12 @@ public class Keks implements Backware {
 		return result;
 	}
 
+	/**
+	 * Wenn obj ein Keks ist, werden alle Eigenschaften der Kekse (this und obj)
+	 * auf Gleichheit geprueft.
+	 * 
+	 * Liefert true wenn beide Kekse gleich sind und false anderenfalls.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -39,9 +43,20 @@ public class Keks implements Backware {
 		if (getClass() != obj.getClass())
 			return false;
 		Keks other = (Keks) obj;
-		return form.equals(other.form) && teig.equals(other.teig);
+		if (form == null) {
+			if (other.form != null)
+				return false;
+		} else if (!form.equals(other.form))
+			return false;
+		if (teig != other.teig)
+			return false;
+		return true;
 	}
 
+	/**
+	 * Es wird "Keks:" gefolgt von allen Eigenschaften (mit ',' getrennt)
+	 * zurueckgegeben.
+	 */
 	@Override
 	public String toString() {
 		return "Keks: " + form + ", " + teig;
