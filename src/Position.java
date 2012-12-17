@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Definiert das Grundgeruest für eine Position.
+ * Es wird aufgenommen, wiviel Stueck eine Position enthaelt.
+ */
 public abstract class Position {
 	private int anzahl;
 
@@ -8,6 +12,12 @@ public abstract class Position {
 		this.anzahl = anzahl;
 	}
 
+	/**
+	 * Baeckt alle Kekse einer Position.
+	 * 
+	 * @return
+	 * 		Gibt eine Liste mit den erzeugten Backwaren zurück.
+	 */
 	protected final List<Backware> backe() {
 		List<Backware> kekse = new ArrayList<Backware>();
 

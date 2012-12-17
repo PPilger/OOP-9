@@ -1,3 +1,6 @@
+/**
+ * Diese Klasse definiert Form und Teigart eines Kekses.
+ */
 public class Keks implements Backware {
 	private Form form;
 	private Teig teig;
@@ -7,6 +10,12 @@ public class Keks implements Backware {
 		this.teig = teig;
 	}
 
+	/**
+	 * Kopierkonstruktor
+	 * 
+	 * @param other
+	 *            Instanz eines anderen Keks-Objekts
+	 */
 	public Keks(Keks other) {
 		this.form = other.form;
 		this.teig = other.teig;

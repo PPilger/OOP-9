@@ -1,3 +1,6 @@
+/**
+ * Eine KeksPosition erweitert eine Position um die Eigenschaften Form & Teig.
+ */
 public class KeksPosition extends Position {
 	private Form form;
 	private Teig teig;
