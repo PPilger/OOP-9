@@ -1,9 +1,12 @@
 /**
- * Doppelkeks repraesentiert einen doppelten Keks mit einer Fuellung besteht.
+ * Doppelkeks repraesentiert einen doppelten Keks mit einer Fuellung.
  */
 public class Doppelkeks extends Keks {
 	private Fuellung fuellung;
 
+	/**
+	 * form darf nicht null sein.
+	 */
 	public Doppelkeks(Form form, Teig teig, Fuellung fuellung) {
 		super(form, teig);
 

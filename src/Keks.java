@@ -3,9 +3,13 @@
  * bestimmten Teig.
  */
 public class Keks extends Backware {
+	// form ungleich null
 	private Form form;
 	private Teig teig;
 
+	/**
+	 * form darf nicht null sein.
+	 */
 	public Keks(Form form, Teig teig) {
 		this.form = form;
 		this.teig = teig;
@@ -39,6 +43,7 @@ public class Keks extends Backware {
 		return result;
 	}
 
+
 	/**
 	 * Wenn obj ein Keks ist, werden alle Eigenschaften der Kekse (this und obj)
 	 * auf Gleichheit geprueft.
@@ -59,7 +64,10 @@ public class Keks extends Backware {
 				return false;
 		} else if (!form.equals(other.form))
 			return false;
-		if (teig != other.teig)
+		if (teig == null) {
+			if (other.teig != null)
+				return false;
+		} else if (!teig.equals(other.teig))
 			return false;
 		return true;
 	}

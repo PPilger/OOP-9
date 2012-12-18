@@ -34,7 +34,7 @@ public class Dose<T> {
 	 * Gibt die Objekte gemeinsam mit der Anzahl der Vorkommen zeilenweise auf
 	 * der Standardausgabe aus.
 	 * 
-	 * Format (je Zeile): anzahl x obj
+	 * Format (je Zeile): <anzahl> x <obj>
 	 */
 	public void inhalt() {
 		for (T ware : inhalt.keySet()) {
