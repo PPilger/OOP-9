@@ -16,18 +16,14 @@ public class Test {
 	}
 
 	private static void test1() {
-		Bestellung bestellung = new Bestellung();
-		Dose dose;
+		Bestellung<Keks> bestellung = new Bestellung<Keks>();
+		Dose<Keks> dose;
 
-		bestellung.add(new KeksPosition(1, new WeihnachtsmannForm(),
-				new MuerbTeig()));
-		bestellung.add(new KeksPosition(3, new WeihnachtsmannForm(),
-				new MuerbTeig()));
-		bestellung
-				.add(new KeksPosition(2, new RundeForm(), new SchokoladeTeig()));
-		bestellung.add(new KeksPosition(3, new RundeForm(), new ZimtTeig()));
-		bestellung
-				.add(new KeksPosition(4, new MondForm(), new SchokoladeTeig()));
+		bestellung.add(1, new Keks(new WeihnachtsmannForm(), new MuerbTeig()));
+		bestellung.add(3, new Keks(new WeihnachtsmannForm(), new MuerbTeig()));
+		bestellung.add(2, new Keks(new RundeForm(), new SchokoladeTeig()));
+		bestellung.add(3, new Keks(new RundeForm(), new ZimtTeig()));
+		bestellung.add(4, new Keks(new MondForm(), new SchokoladeTeig()));
 
 		System.out.println("1.Bestellung:");
 		bestellung.drucke();
@@ -39,20 +35,19 @@ public class Test {
 	}
 
 	private static void test2() {
+		Bestellung<Keks> bestellung = new Bestellung<Keks>();
+		Dose<Keks> dose;
 
-		Bestellung bestellung = new Bestellung();
-		Dose dose;
-
-		bestellung.add(new DoppelkeksPosition(15, new MondForm(),
-				new SchokoladeTeig(), new MarmeladeFuellung()));
-		bestellung.add(new KeksPosition(25, new RundeForm(), new ZimtTeig()));
-		bestellung.add(new DoppelkeksPosition(2, new MondForm(),
-				new MuerbTeig(), new SchokoladeFuellung()));
-		bestellung.add(new KeksPosition(9, new WeihnachtsmannForm(),
+		bestellung.add(15, new Doppelkeks(new MondForm(), new SchokoladeTeig(),
+				new MarmeladeFuellung()));
+		bestellung.add(25, new Keks(new RundeForm(), new ZimtTeig()));
+		bestellung.add(2, new Doppelkeks(new MondForm(), new MuerbTeig(),
+				new SchokoladeFuellung()));
+		bestellung.add(9, new Keks(new WeihnachtsmannForm(),
 				new SchokoladeTeig()));
-		bestellung.add(new DoppelkeksPosition(13, new WeihnachtsmannForm(),
+		bestellung.add(13, new Doppelkeks(new WeihnachtsmannForm(),
 				new SchokoladeTeig(), new SchokoladeFuellung()));
-		bestellung.add(new KeksPosition(33, new MondForm(), new ZimtTeig()));
+		bestellung.add(33, new Keks(new MondForm(), new ZimtTeig()));
 
 		System.out.println("2.Bestellung:");
 		bestellung.drucke();
@@ -64,35 +59,30 @@ public class Test {
 	}
 
 	private static void test3() {
+		Bestellung<Keks> bestellung = new Bestellung<Keks>();
+		Dose<Keks> dose;
 
-		Bestellung bestellung = new Bestellung();
-		Dose dose;
-
-		bestellung.add(new DoppelkeksPosition(1, new MondForm(),
-				new SchokoladeTeig(), new MarmeladeFuellung()));
-		bestellung.add(new KeksPosition(2, new RundeForm(), new ZimtTeig()));
-		bestellung.add(new KeksPosition(5, new WeihnachtsmannForm(),
+		bestellung.add(1, new Doppelkeks(new MondForm(), new SchokoladeTeig(),
+				new MarmeladeFuellung()));
+		bestellung.add(2, new Keks(new RundeForm(), new ZimtTeig()));
+		bestellung.add(5, new Keks(new WeihnachtsmannForm(),
 				new SchokoladeTeig()));
-		bestellung.add(new DoppelkeksPosition(8, new WeihnachtsmannForm(),
+		bestellung.add(8, new Doppelkeks(new WeihnachtsmannForm(),
 				new SchokoladeTeig(), new SchokoladeFuellung()));
-		bestellung.add(new KeksPosition(3, new MondForm(), new ZimtTeig()));
-		bestellung.add(new KeksPosition(5, new WeihnachtsmannForm(),
-				new MuerbTeig()));
-		bestellung.add(new KeksPosition(3, new WeihnachtsmannForm(),
-				new MuerbTeig()));
-		bestellung
-				.add(new KeksPosition(2, new RundeForm(), new SchokoladeTeig()));
-		bestellung.add(new KeksPosition(3, new RundeForm(), new ZimtTeig()));
-		bestellung
-				.add(new KeksPosition(4, new MondForm(), new SchokoladeTeig()));
-		bestellung.add(new DoppelkeksPosition(8, new RundeForm(),
-				new SchokoladeTeig(), new SchokoladeFuellung()));
-		bestellung.add(new DoppelkeksPosition(4, new WeihnachtsmannForm(),
+		bestellung.add(3, new Keks(new MondForm(), new ZimtTeig()));
+		bestellung.add(5, new Keks(new WeihnachtsmannForm(), new MuerbTeig()));
+		bestellung.add(3, new Keks(new WeihnachtsmannForm(), new MuerbTeig()));
+		bestellung.add(2, new Keks(new RundeForm(), new SchokoladeTeig()));
+		bestellung.add(3, new Keks(new RundeForm(), new ZimtTeig()));
+		bestellung.add(4, new Keks(new MondForm(), new SchokoladeTeig()));
+		bestellung.add(8, new Doppelkeks(new RundeForm(), new SchokoladeTeig(),
+				new SchokoladeFuellung()));
+		bestellung.add(4, new Doppelkeks(new WeihnachtsmannForm(),
 				new MuerbTeig(), new MarmeladeFuellung()));
-		bestellung.add(new DoppelkeksPosition(10, new MondForm(),
-				new ZimtTeig(), new SchokoladeFuellung()));
-		bestellung.add(new DoppelkeksPosition(2, new MondForm(),
-				new SchokoladeTeig(), new MarmeladeFuellung()));
+		bestellung.add(10, new Doppelkeks(new MondForm(), new ZimtTeig(),
+				new SchokoladeFuellung()));
+		bestellung.add(2, new Doppelkeks(new MondForm(), new SchokoladeTeig(),
+				new MarmeladeFuellung()));
 
 		System.out.println("3.Bestellung:");
 		bestellung.drucke();

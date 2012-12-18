@@ -1,13 +1,33 @@
 /**
  * Doppelkeks repraesentiert einen doppelten Keks mit einer Fuellung besteht.
  */
-public class DoppelKeks extends Keks {
+public class Doppelkeks extends Keks {
 	private Fuellung fuellung;
 
-	public DoppelKeks(Keks keks, Fuellung fuellung) {
+	public Doppelkeks(Form form, Teig teig, Fuellung fuellung) {
+		super(form, teig);
+
+		this.fuellung = fuellung;
+	}
+	
+	public Doppelkeks(Keks keks, Fuellung fuellung) {
 		super(keks);
 
 		this.fuellung = fuellung;
+	}
+
+	/**
+	 * Liefert einen neuen Doppelkeks mit den selben Eigenschaften wie dieser
+	 * Doppelkeks. Der Typ des erzeugten Doppelkeks stimmt mit dem Typ dieses
+	 * Doppelkeks ueberein.
+	 */
+	@Override
+	protected Doppelkeks backen() {
+		DoppelkeksBackmaschine backmaschine = DoppelkeksBackmaschine
+				.getInstance();
+		Keks keks = super.backen();
+
+		return backmaschine.backeDoppelkeks(keks, fuellung);
 	}
 
 	@Override
@@ -33,7 +53,7 @@ public class DoppelKeks extends Keks {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		DoppelKeks other = (DoppelKeks) obj;
+		Doppelkeks other = (Doppelkeks) obj;
 		if (fuellung != other.fuellung)
 			return false;
 		return true;

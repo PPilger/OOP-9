@@ -1,7 +1,7 @@
 public class SchokoladeFuellung extends Fuellung {
 	@Override
 	public String toString() {
-		return "SchokoladeFuellung";
+		return "Schokoladefuellung";
 	}
 
 }

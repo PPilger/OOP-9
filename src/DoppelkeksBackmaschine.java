@@ -1,10 +1,13 @@
 /**
- * @TODO: Pilgi
+ * Eine Backmaschine, die Doppelkekse backen kann.
+ * 
+ * Auf die (einzige) DoppelkeksBackmaschine kann ueber getInstance zugegriffen
+ * werden.
  */
 public class DoppelkeksBackmaschine {
 	private static DoppelkeksBackmaschine instance;
 
-	public static DoppelkeksBackmaschine getInstance() {
+	protected static DoppelkeksBackmaschine getInstance() {
 		if (instance == null) {
 			instance = new DoppelkeksBackmaschine();
 		}
@@ -14,7 +17,11 @@ public class DoppelkeksBackmaschine {
 	private DoppelkeksBackmaschine() {
 	}
 
-	public DoppelKeks backeDoppelkeks(Keks keks, Fuellung fuellung) {
-		return new DoppelKeks(keks, fuellung);
+	/**
+	 * Baeckt einen Doppelkeks aus dem uebergebenen keks mit der uebergebenen
+	 * Fuellung und liefert diesen zurueck.
+	 */
+	public Doppelkeks backeDoppelkeks(Keks keks, Fuellung fuellung) {
+		return new Doppelkeks(keks, fuellung);
 	}
 }

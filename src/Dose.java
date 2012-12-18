@@ -1,50 +1,43 @@
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
- * Realisiert eine Dose, welche Kekse aufnehmen kann.
+ * Realisiert eine Dose, Objekte zusammen mit der Anzahl (wie oft das Objekt
+ * bereits eingefuegt wurde) abspeichert.
+ * 
+ * Setzt die korrekte implementierung von equals und hashcode in den zu
+ * speichernden Objekten voraus.
  */
-public class Dose {
-	private Map<Backware, Integer> inhalt = new HashMap<Backware, Integer>();
+public class Dose<T> {
+	// Enthaelt ein Objekt und die Anzahl wie oft es bereits eingefuegt wurde.
+	private Map<T, Integer> inhalt = new HashMap<T, Integer>();
 
 	/**
-	 * Fuegt eine Backware in die Dose hinzu.
+	 * Fuegt ein Objekt in zur Dose hinzu. Ist bereits ein gleiches Objekt
+	 * enthalten, wird dessen Anzahl um 1 erhoeht. Ist kein solches Objekt
+	 * enthalten, wird es mit der Anzahl 1 eingefuegt.
 	 * 
-	 * Vorbedingung: backware darf nicht null sein.
-	 * 
-	 * @param backware
-	 *            Eine Backware, welche in die Liste hinzugefuegt wird.
+	 * Ist obj null, bleibt der Zustand der Dose unveraendert.
 	 */
-	public void add(Backware backware) {
-		if (inhalt.containsKey(backware)) {
-			int amount = inhalt.get(backware);
-			inhalt.put(backware, amount + 1);
-		} else {
-			inhalt.put(backware, 1);
+	public void add(T obj) {
+		if (obj != null) {
+			if (inhalt.containsKey(obj)) {
+				int amount = inhalt.get(obj);
+				inhalt.put(obj, amount + 1);
+			} else {
+				inhalt.put(obj, 1);
+			}
 		}
 	}
 
 	/**
-	 * Fuegt eine Liste von Backwaren in die Dose hinzu.
+	 * Gibt die Objekte gemeinsam mit der Anzahl der Vorkommen zeilenweise auf
+	 * der Standardausgabe aus.
 	 * 
-	 * Vorbedingung: Die Liste darf nicht null sein.
-	 * 
-	 * @param backwaren
-	 *            Eine Backwarenliste, welche in die Liste der Dose hinzugefuegt
-	 *            wird.
-	 */
-	public void addAll(List<Backware> backwaren) {
-		for (Backware backware : backwaren) {
-			add(backware);
-		}
-	}
-
-	/**
-	 * Gibt den Inhalt der Dose aus, inkluse Anzahl der verschiedenen Kekse.
+	 * Format (je Zeile): anzahl x obj
 	 */
 	public void inhalt() {
-		for (Backware ware : inhalt.keySet()) {
+		for (T ware : inhalt.keySet()) {
 			int amount = inhalt.get(ware);
 			System.out.println(amount + " x " + ware);
 		}

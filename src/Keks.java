@@ -2,7 +2,7 @@
  * Diese Klasse repraesentiert einen Keks mit einer bestimmten Form und einem
  * bestimmten Teig.
  */
-public class Keks implements Backware {
+public class Keks extends Backware {
 	private Form form;
 	private Teig teig;
 
@@ -17,6 +17,17 @@ public class Keks implements Backware {
 	public Keks(Keks original) {
 		this.form = original.form;
 		this.teig = original.teig;
+	}
+
+	/**
+	 * Liefert einen neuen Keks mit den selben Eigenschaften wie dieser Keks.
+	 * Der Typ des erzeugten Keks stimmt mit dem Typ dieses Keks ueberein.
+	 */
+	@Override
+	protected Keks backen() {
+		KeksBackmaschine backmaschine = form.getBackmaschine();
+
+		return backmaschine.backeKeks(teig);
 	}
 
 	@Override
