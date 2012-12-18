@@ -28,7 +28,7 @@ public class Bestellung<T extends Backware> {
 
 	/**
 	 * Gibt alle Positionen der Bestelliste zeilenweise auf der Standardausgabe
-	 * aus.
+	 * aus (in der Einfuegereihenfolge).
 	 * 
 	 * Format: Position #<num>: <anzahl> x <referenzWare>
 	 */

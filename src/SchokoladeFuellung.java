@@ -3,5 +3,4 @@ public class SchokoladeFuellung extends Fuellung {
 	public String toString() {
 		return "Schokoladefuellung";
 	}
-
 }

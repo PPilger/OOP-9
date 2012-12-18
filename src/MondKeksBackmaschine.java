@@ -1,5 +1,8 @@
 /**
- * @TODO: Pilgi
+ * Eine Backmaschine, die mondfoermige Kekse backen kann.
+ * 
+ * Auf die (einzige) MondKeksBackmaschine kann ueber getInstance zugegriffen
+ * werden.
  */
 public class MondKeksBackmaschine extends KeksBackmaschine {
 	private static MondKeksBackmaschine instance;
@@ -14,6 +17,9 @@ public class MondKeksBackmaschine extends KeksBackmaschine {
 	private MondKeksBackmaschine() {
 	}
 
+	/**
+	 * Liefert eine MondForm
+	 */
 	@Override
 	protected MondForm getForm() {
 		return new MondForm();

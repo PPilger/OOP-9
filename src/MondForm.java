@@ -1,10 +1,9 @@
-/**
- * Die MondForm ist eine Erweiterung der Form. Sie erzeugt eine
- * MondKeksBackmaschine.
- */
 public class MondForm extends Form {
+	/**
+	 * Liefert die MondKeksBackmaschine
+	 */
 	@Override
-	public MondKeksBackmaschine getBackmaschine() {
+	protected MondKeksBackmaschine getBackmaschine() {
 		return MondKeksBackmaschine.getInstance();
 	}
 

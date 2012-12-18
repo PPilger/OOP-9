@@ -1,5 +1,8 @@
 /**
- * @TODO: Pilgi
+ * Eine Backmaschine, die runde Kekse backen kann.
+ * 
+ * Auf die (einzige) RundKeksBackmaschine kann ueber getInstance zugegriffen
+ * werden.
  */
 public class RundKeksBackmaschine extends KeksBackmaschine {
 	private static RundKeksBackmaschine instance;
@@ -14,8 +17,11 @@ public class RundKeksBackmaschine extends KeksBackmaschine {
 	private RundKeksBackmaschine() {
 	}
 
+	/**
+	 * Liefert eine RundForm
+	 */
 	@Override
-	protected RundeForm getForm() {
-		return new RundeForm();
+	protected RundForm getForm() {
+		return new RundForm();
 	}
 }

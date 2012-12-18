@@ -1,5 +1,5 @@
 /**
- * Definiert das Grundgeruest eines Teiges
+ * Repraesentiert die Teigart eines Kekses.
  */
 public abstract class Teig {
 
@@ -8,6 +8,9 @@ public abstract class Teig {
 		return getClass().hashCode();
 	}
 
+	/**
+	 * Wenn this und obj beide die selbe Teigart darstellen, sind sie gleich.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) {
