@@ -61,8 +61,8 @@ public class Test {
 	}
 
 	private static void test3() {
-		Bestellung<Keks> bestellung = new Bestellung<Keks>();
-		Dose<Keks> dose;
+		Bestellung<Backware> bestellung = new Bestellung<Backware>();
+		Dose<Backware> dose;
 
 		bestellung.add(1, new Doppelkeks(new MondForm(), new SchokoladeTeig(),
 				new MarmeladeFuellung()));
